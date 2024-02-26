@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #282e2a;
+    z-index: 1;
+}
+
+.stripe:nth-child(even) {
+    border-left: 1px solid rgb(80, 80, 80);
+}
+
+.stripe {
+    float: right;
+    width: 5%;
+    height: 100%;
+    transform: translateY(-100%);
+    background-color: rgb(133, 160, 135);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* on load animation */
+@keyframes moveDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* before leaving via link animation */
+@keyframes moveUp {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+/* link */
+.go {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.go a {
+    position: relative;
+    color: #282e2a;
+    font-size: 40px;
+    text-decoration: none;
+    z-index: 2;
+    font-family: 'Abel', 'Trebuchet MS', sans-serif;
+}
